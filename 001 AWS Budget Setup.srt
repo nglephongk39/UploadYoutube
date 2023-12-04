@@ -1,0 +1,540 @@
+1
+00:00:00,300 --> 00:00:01,320
+So in this account,
+
+2
+00:00:01,320 --> 00:00:02,640
+we're going to make sure to spend
+
+3
+00:00:02,640 --> 00:00:04,140
+the least amount of money or no money,
+
+4
+00:00:04,140 --> 00:00:05,370
+and I will let you know when something
+
+5
+00:00:05,370 --> 00:00:06,270
+will cost you some money.
+
+6
+00:00:06,270 --> 00:00:07,830
+But nonetheless, it is a good idea
+
+7
+00:00:07,830 --> 00:00:09,315
+to set up a billing budget
+
+8
+00:00:09,315 --> 00:00:12,750
+so that we know when we go over spending some money
+
+9
+00:00:12,750 --> 00:00:14,820
+and we can get alerted in case of that.
+
+10
+00:00:14,820 --> 00:00:17,610
+So what I'm going to do is click on My Account,
+
+11
+00:00:17,610 --> 00:00:20,010
+and then click on My Billing Dashboard.
+
+12
+00:00:20,010 --> 00:00:21,885
+Now as you can see, I need permissions,
+
+13
+00:00:21,885 --> 00:00:23,400
+and this is because I'm logged in
+
+14
+00:00:23,400 --> 00:00:25,380
+as an IAM user on my account,
+
+15
+00:00:25,380 --> 00:00:27,330
+and we need to change something on the root account
+
+16
+00:00:27,330 --> 00:00:30,635
+before we get access with IAM users, even administrators,
+
+17
+00:00:30,635 --> 00:00:33,810
+to the Billing & Cost Management Dashboard.
+
+18
+00:00:33,810 --> 00:00:36,870
+So to solve this I logged in as my root account,
+
+19
+00:00:36,870 --> 00:00:38,760
+as you can see, now it just says my account number,
+
+20
+00:00:38,760 --> 00:00:39,810
+it doesn't say the IAM user,
+
+21
+00:00:39,810 --> 00:00:41,059
+so I'm logged in as my root account,
+
+22
+00:00:41,059 --> 00:00:42,960
+and then I click on My Accounts.
+
+23
+00:00:42,960 --> 00:00:44,490
+So you need to be your root account to do this.
+
+24
+00:00:44,490 --> 00:00:47,610
+You scroll down and you're going to find this one setting
+
+25
+00:00:47,610 --> 00:00:51,450
+called IAM User and Role Access to Billing Information.
+
+26
+00:00:51,450 --> 00:00:52,441
+And we'll edit this
+
+27
+00:00:52,441 --> 00:00:54,450
+and we'll activate IAM access,
+
+28
+00:00:54,450 --> 00:00:57,840
+and this will allow IAM users who are administrators
+
+29
+00:00:57,840 --> 00:00:59,550
+to access billing data.
+
+30
+00:00:59,550 --> 00:01:00,383
+If you don't want that,
+
+31
+00:01:00,383 --> 00:01:01,740
+you can also set up a billing alarm
+
+32
+00:01:01,740 --> 00:01:03,510
+using the root account, if you wanted to.
+
+33
+00:01:03,510 --> 00:01:05,099
+But I want to show you how to set up a billing alarm
+
+34
+00:01:05,099 --> 00:01:06,180
+using an IAM user,
+
+35
+00:01:06,180 --> 00:01:08,250
+in case this is something you wanted to do.
+
+36
+00:01:08,250 --> 00:01:10,533
+So once this setting is activated,
+
+37
+00:01:11,790 --> 00:01:14,088
+you can go back into your IAM user,
+
+38
+00:01:14,088 --> 00:01:16,740
+and then refresh this page.
+
+39
+00:01:16,740 --> 00:01:19,950
+So here we are in the AWS Billing Dashboard home,
+
+40
+00:01:19,950 --> 00:01:22,230
+and this is where you can see the charges for your month.
+
+41
+00:01:22,230 --> 00:01:24,150
+We do the best to remain within the free tier,
+
+42
+00:01:24,150 --> 00:01:26,100
+but sometimes, if you have any charge,
+
+43
+00:01:26,100 --> 00:01:27,060
+you would see it here,
+
+44
+00:01:27,060 --> 00:01:28,230
+and then let me show you
+
+45
+00:01:28,230 --> 00:01:30,780
+how you can find the source of your charge.
+
+46
+00:01:30,780 --> 00:01:32,995
+So if you go on the left hand side into Bills,
+
+47
+00:01:32,995 --> 00:01:34,650
+and you are on this Bills page,
+
+48
+00:01:34,650 --> 00:01:37,890
+just click on try the new bills page experience
+
+49
+00:01:37,890 --> 00:01:40,290
+to get to this interface.
+
+50
+00:01:40,290 --> 00:01:42,510
+Okay, so once we are here in this interface,
+
+51
+00:01:42,510 --> 00:01:44,160
+you would see your grand total,
+
+52
+00:01:44,160 --> 00:01:45,390
+and then you can scroll down
+
+53
+00:01:45,390 --> 00:01:48,450
+and you can go to Charges by Service.
+
+54
+00:01:48,450 --> 00:01:50,490
+And this is to see which service
+
+55
+00:01:50,490 --> 00:01:52,470
+is incurring you some charges.
+
+56
+00:01:52,470 --> 00:01:54,450
+So for example, if I go and scroll down
+
+57
+00:01:54,450 --> 00:01:58,320
+and go into my Elastic Compute Cloud service,
+
+58
+00:01:58,320 --> 00:02:00,870
+I can see that 62 cents were incurred
+
+59
+00:02:00,870 --> 00:02:03,840
+in the US East, Northern Virginia region.
+
+60
+00:02:03,840 --> 00:02:07,380
+So I click on it and open this in a new page.
+
+61
+00:02:07,380 --> 00:02:10,202
+And on the new UI, I see that, yes, this is the charge,
+
+62
+00:02:10,202 --> 00:02:13,170
+and it comes from the EBS part of it.
+
+63
+00:02:13,170 --> 00:02:14,880
+So this is the Usage Description,
+
+64
+00:02:14,880 --> 00:02:16,800
+and it says that I've been using
+
+65
+00:02:16,800 --> 00:02:21,800
+a six gigabyte month of the gp2 type of EBS volume.
+
+66
+00:02:22,020 --> 00:02:23,340
+So this information is enough for me
+
+67
+00:02:23,340 --> 00:02:26,850
+to figure out that I've probably left a volume unused
+
+68
+00:02:26,850 --> 00:02:27,870
+in my accounts.
+
+69
+00:02:27,870 --> 00:02:31,530
+So I would go into the Elastic Compute Cloud console
+
+70
+00:02:31,530 --> 00:02:34,170
+I would switch to the Northern Virginia region,
+
+71
+00:02:34,170 --> 00:02:37,170
+using the top right hand side dropdown,
+
+72
+00:02:37,170 --> 00:02:38,940
+and then I would go into the EBS section
+
+73
+00:02:38,940 --> 00:02:42,600
+and delete this volume that's been incurring charges to me.
+
+74
+00:02:42,600 --> 00:02:45,510
+So it's up to you, of course, to debug your own costs,
+
+75
+00:02:45,510 --> 00:02:48,780
+and so this is the way you would do it.
+
+76
+00:02:48,780 --> 00:02:50,790
+Also, if you go over the free tier,
+
+77
+00:02:50,790 --> 00:02:52,260
+this is going to be on the left hand side.
+
+78
+00:02:52,260 --> 00:02:53,640
+So if you go on the left hand side,
+
+79
+00:02:53,640 --> 00:02:55,924
+you will see all your services,
+
+80
+00:02:55,924 --> 00:02:58,800
+as well as what is the free tier usage
+
+81
+00:02:58,800 --> 00:02:59,988
+and your current usage.
+
+82
+00:02:59,988 --> 00:03:03,000
+So you know right away if you are, for example,
+
+83
+00:03:03,000 --> 00:03:05,490
+at 100% of your free tier
+
+84
+00:03:05,490 --> 00:03:07,140
+or if you're about to hit it and so on,
+
+85
+00:03:07,140 --> 00:03:08,940
+so this really helps you to understand
+
+86
+00:03:08,940 --> 00:03:10,790
+what you've been doing wrong as well.
+
+87
+00:03:12,030 --> 00:03:15,120
+Now to get alerts about your upcoming costs,
+
+88
+00:03:15,120 --> 00:03:19,683
+the best thing to do is to go into creating an AWS budget.
+
+89
+00:03:21,390 --> 00:03:23,790
+So I am now in the budget console,
+
+90
+00:03:23,790 --> 00:03:26,130
+and I'm going to create a budget in here
+
+91
+00:03:26,130 --> 00:03:27,600
+so that we can track our cost
+
+92
+00:03:27,600 --> 00:03:29,310
+and we can make sure we receive alerts
+
+93
+00:03:29,310 --> 00:03:31,350
+if we're about to hit our limits.
+
+94
+00:03:31,350 --> 00:03:32,880
+So here are some templates,
+
+95
+00:03:32,880 --> 00:03:34,980
+so we have user templates,
+
+96
+00:03:34,980 --> 00:03:37,950
+and then we can go into a zero spend budget
+
+97
+00:03:37,950 --> 00:03:39,750
+that creates a budget that notifies you
+
+98
+00:03:39,750 --> 00:03:42,960
+once your spending exceeds the free tier limits.
+
+99
+00:03:42,960 --> 00:03:45,720
+So in that case, I will have my Zero Spend Budget,
+
+100
+00:03:45,720 --> 00:03:46,890
+this is good.
+
+101
+00:03:46,890 --> 00:03:48,780
+And we can have email recipients,
+
+102
+00:03:48,780 --> 00:03:50,643
+so stephane@example.com.
+
+103
+00:03:52,890 --> 00:03:54,300
+And then you will be notified via email
+
+104
+00:03:54,300 --> 00:03:56,760
+for any spend is incurred.
+
+105
+00:03:56,760 --> 00:03:58,680
+So let's create this budget,
+
+106
+00:03:58,680 --> 00:04:00,753
+and that's one budget right here.
+
+107
+00:04:02,040 --> 00:04:05,130
+And then, I can create a second budget if I wanted to.
+
+108
+00:04:05,130 --> 00:04:08,250
+And again, we're going to use a simplified template
+
+109
+00:04:08,250 --> 00:04:11,070
+and we're going to go for monthly cost budgets
+
+110
+00:04:11,070 --> 00:04:12,750
+and this is the amount of cost
+
+111
+00:04:12,750 --> 00:04:15,450
+that we want to budget for our cloud.
+
+112
+00:04:15,450 --> 00:04:17,430
+So for example, I can say that
+
+113
+00:04:17,430 --> 00:04:21,209
+I don't wanna spend any more than $10, so I put 10 here.
+
+114
+00:04:21,209 --> 00:04:23,460
+And then, the email recipients,
+
+115
+00:04:23,460 --> 00:04:25,620
+so again, stephane@example.com,
+
+116
+00:04:25,620 --> 00:04:27,960
+and then I will be notified actually
+
+117
+00:04:27,960 --> 00:04:32,370
+if my actual spend reaches 85% or 100%,
+
+118
+00:04:32,370 --> 00:04:36,120
+or if my forecasted spend is expected to reach 100%.
+
+119
+00:04:36,120 --> 00:04:38,280
+So this is another way to set the budgets,
+
+120
+00:04:38,280 --> 00:04:42,360
+and let's click on Create Budgets, and we're good to go.
+
+121
+00:04:42,360 --> 00:04:43,193
+So that's it, of course,
+
+122
+00:04:43,193 --> 00:04:44,910
+my zero spend budget has been exceeded
+
+123
+00:04:44,910 --> 00:04:46,200
+because I am already in an account
+
+124
+00:04:46,200 --> 00:04:48,630
+that has been some charges, so as you can see,
+
+125
+00:04:48,630 --> 00:04:51,570
+we have an alert and I would receive an email.
+
+126
+00:04:51,570 --> 00:04:52,403
+And so, that's it,
+
+127
+00:04:52,403 --> 00:04:54,720
+with this you know how to explore your bills,
+
+128
+00:04:54,720 --> 00:04:56,550
+you know how to explore your free tier,
+
+129
+00:04:56,550 --> 00:04:58,290
+you know how to set up a budget
+
+130
+00:04:58,290 --> 00:04:59,910
+so that you can track your cost
+
+131
+00:04:59,910 --> 00:05:03,390
+for monthly budget costs or for free tier costs.
+
+132
+00:05:03,390 --> 00:05:04,590
+And that should be enough for you
+
+133
+00:05:04,590 --> 00:05:06,780
+to control your costs in this course.
+
+134
+00:05:06,780 --> 00:05:08,580
+Okay, I hope you liked this lecture,
+
+135
+00:05:08,580 --> 00:05:10,623
+and I will see you in the next lecture.
+
